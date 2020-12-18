@@ -1,33 +1,26 @@
-'''
-    Flask-SeaSurf
-    -------------
-
-    An updated cross-site forgery protection extension for Flask.
-
-    Links
-    `````
-
-    * `documentation <http://packages.python.org/Flask-SeaSurf>`_
-'''
 import os
 
 from setuptools import setup
 
-module_path = os.path.join(os.path.dirname(__file__), 'flask_seasurf.py')
+this_directory = os.path.dirname(__file__)
+module_path = os.path.join(this_directory, 'flask_seasurf.py')
 version_line = [line for line in open(module_path)
                 if line.startswith('__version_info__')][0]
+with open(os.path.join(this_directory, 'README.markdown'), encoding='utf-8') as f:
+    long_description = f.read()
 
 __version__ = '.'.join(eval(version_line.split('__version_info__ = ')[-1]))
 
 setup(
-    name='Flask-SeaSurf',
+    name='Flask-SeaSurf-gaborfeher',
     version=__version__,
     url='https://github.com/maxcountryman/flask-seasurf/',
     license='BSD',
     author='Max Countryman',
     author_email='maxc@me.com',
     description='An updated CSRF extension for Flask.',
-    long_description=__doc__,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     py_modules=['flask_seasurf'],
     test_suite='test_seasurf',
     zip_safe=False,
