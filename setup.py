@@ -12,7 +12,7 @@ with open(os.path.join(this_directory, 'README.markdown')) as f:
 __version__ = '.'.join(eval(version_line.split('__version_info__ = ')[-1]))
 
 setup(
-    name='Flask-SeaSurf',
+    name='Flask-SeaSurf-gaborfeher',
     version=__version__,
     url='https://github.com/maxcountryman/flask-seasurf/',
     license='BSD',

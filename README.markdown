@@ -4,6 +4,8 @@
 
 SeaSurf is a Flask extension for preventing cross-site request forgery (CSRF). 
 
+árvíztűrő tükörfúrógép
+
 CSRF vulnerabilities have been found in large and popular sites such as 
 YouTube. These attacks are problematic because the mechanism they use is 
 relatively easy to exploit. This extension attempts to aid you in securing 
